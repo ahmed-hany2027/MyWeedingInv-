@@ -50,7 +50,7 @@ footer{text-align:center;color:var(--mut);margin:40px 0 20px;font-size:15px}
   <div class="rule"></div>
   <div class="date">الجمعة ٢٠ نوفمبر ٢٠٢٦</div>
   <div class="en">Friday, November 20th, 2026</div>
-  <p class="sub" style="margin:10px 0 0">الحضور ٧:٣٠ مساءً · الاستقبال ٨:٠٠ مساءً<br><span class="en" style="font-size:17px">Arrival 7:30 PM · Reception 8:00 PM</span></p>
+  <p class="sub" style="margin:10px 0 0">الحضور ٦:٣٠ مساءً · الاستقبال ٧:٠٠ مساءً<br><span class="en" style="font-size:17px">Arrival 6:30 PM · Reception 7:00 PM</span></p>
   <div id="cd"></div>
   <div style="margin-top:6px"><a class="btn o" id="gcal" target="_blank" rel="noopener" href="#">أضف إلى Google Calendar</a> <a class="btn o" id="ics" href="#">أضف إلى تقويم الجوال (iPhone / Outlook)</a></div>
 </section>
@@ -124,7 +124,7 @@ footer{text-align:center;color:var(--mut);margin:40px 0 20px;font-size:15px}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script type="module">
 /* ===== إعدادات Firebase: الصق بيانات مشروعك هنا (انظر README) ===== */
-const FIREBASE = { apiKey:"", authDomain:"", projectId:"", appId:"" };
+const FIREBASE = { apiKey:"AIzaSyD0TO7fPLIX40CzcDy7MXvNhx84RR63ROA", authDomain:"ahmedhaniweeding.firebaseapp.com", projectId:"ahmedhaniweeding", storageBucket:"ahmedhaniweeding.firebasestorage.app", messagingSenderId:"561139257724", appId:"1:561139257724:web:90bea7ddd06453ad4594f9" };
 const ADMIN_EMAIL = "ahmed.hani@wedding.example.com"; // بريد العروسين المسجّل في Firebase Authentication
 /* ================================================================ */
 
@@ -132,14 +132,14 @@ const $ = i => document.getElementById(i);
 const esc = s => { const e=document.createElement("div"); e.textContent=s; return e.innerHTML };
 
 // العدّاد
-const target = new Date("2026-11-20T19:30:00+02:00").getTime();
+const target = new Date("2026-11-20T18:30:00+02:00").getTime();
 function tick(){const s=Math.floor(Math.max(0,target-Date.now())/1000);
  $("cd").innerHTML=[[Math.floor(s/86400),"يوم"],[Math.floor(s%86400/3600),"ساعة"],[Math.floor(s%3600/60),"دقيقة"]].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}
 tick(); setInterval(tick,30000);
 
 // التقويم
-const EV={title:"زفاف أحمد ووصال | Ahmed & Wesal Wedding",loc:"Majestic Hall, TOLIP Hotel, New Cairo",start:"20261120T173000Z",end:"20261120T213000Z"};
-$("gcal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(EV.title)+"&dates="+EV.start+"/"+EV.end+"&location="+encodeURIComponent(EV.loc)+"&details="+encodeURIComponent("الحضور 7:30 م - الاستقبال 8:00 م");
+const EV={title:"زفاف أحمد ووصال | Ahmed & Wesal Wedding",loc:"Majestic Hall, TOLIP Hotel, New Cairo",start:"20261120T163000Z",end:"20261120T203000Z"};
+$("gcal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(EV.title)+"&dates="+EV.start+"/"+EV.end+"&location="+encodeURIComponent(EV.loc)+"&details="+encodeURIComponent("الحضور 6:30 م - الاستقبال 7:00 م");
 const ICS=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Wedding Invite//AR","BEGIN:VEVENT","UID:wedding-ahmed-wesal-20261120@invite","DTSTAMP:20261014T000000Z","DTSTART:"+EV.start,"DTEND:"+EV.end,"SUMMARY:"+EV.title,"LOCATION:Majestic Hall\\, TOLIP Hotel\\, New Cairo","BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:Wedding tomorrow","END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");
 $("ics").href="data:text/calendar;charset=utf-8,"+encodeURIComponent(ICS);
 $("ics").setAttribute("download","wedding.ics");
