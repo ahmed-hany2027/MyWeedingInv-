@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زفاف | أحمد & وصال</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1426;--card:#111d36;--ink:#f3ecda;--mut:#a9b3c7;--gold:#c9a24b;--line:rgba(201,162,75,.35);--in:#0b1426}
+@media (prefers-color-scheme:light){:root{--bg:#f6f1e6;--card:#fffaf0;--ink:#14213d;--mut:#5b6478;--gold:#9a7424;--line:rgba(154,116,36,.4);--in:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Amiri','Cormorant Garamond',Georgia,serif;line-height:1.7}
+.wrap{max-width:620px;margin:0 auto;padding:20px}
+.hero{text-align:center;padding:54px 18px 36px;border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-10px;background:var(--card);margin-top:12px}
+.eyebrow{color:var(--gold);letter-spacing:.2em;font-size:14px;font-family:'Cormorant Garamond',serif;text-transform:uppercase}
+.names{font-size:46px;margin:14px 0 4px;line-height:1.25;font-weight:700}
+.amp{color:var(--gold);display:block;font-size:30px}
+.en{font-family:'Cormorant Garamond',serif;color:var(--mut);font-size:20px;letter-spacing:.08em}
+.rule{width:80px;height:1px;background:var(--gold);margin:22px auto}
+.date{font-size:26px}.sub{color:var(--mut)}
+#cd{display:flex;gap:10px;justify-content:center;margin-top:20px}
+#cd div{min-width:64px;border:1px solid var(--line);padding:8px 4px}
+#cd b{display:block;font-size:26px;color:var(--gold)}#cd span{font-size:13px;color:var(--mut)}
+h2{text-align:center;color:var(--gold);font-weight:400;font-size:26px;margin:40px 0 14px}
+.box{background:var(--card);border:1px solid var(--line);padding:20px;text-align:center}
+a.map{display:block;text-decoration:none;color:inherit}
+.map svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.btn{display:inline-block;margin-top:14px;background:var(--gold);color:#0b1426;border:0;padding:11px 26px;font:700 17px 'Amiri',serif;cursor:pointer;text-decoration:none}
+.btn.o{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+input,textarea,select{width:100%;background:var(--in);color:var(--ink);border:1px solid var(--line);padding:11px;font:18px 'Amiri',serif;margin-top:10px}
+input[type=radio]{width:auto;margin:0 0 0 6px}
+textarea{min-height:110px;resize:vertical}
+.ch{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.msg{border:1px solid var(--line);background:var(--card);padding:14px 16px;margin-top:10px}
+.msg h4{margin:0;color:var(--gold);font-size:19px}.msg small{color:var(--mut)}.msg p{margin:6px 0 0;white-space:pre-wrap}
+.tabs{display:flex;justify-content:center;gap:8px;margin-top:30px}
+.tabs button{background:#c9a24b;color:#0b1426;border:1px solid var(--gold);padding:8px 18px;font:17px 'Amiri',serif}
+.hide{display:none}
+footer{text-align:center;color:var(--mut);margin:40px 0 20px;font-size:15px}
+.mus{position:fixed;bottom:14px;right:14px;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--gold);font-size:20px;cursor:pointer;z-index:5}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="eyebrow">Wedding Invitation</div>
+  <p class="sub" style="margin:10px 0 0">يتشرف أهل العروسين بدعوتكم لحضور حفل الزفاف</p>
+  <div class="names">أحمد هاني<span class="amp">&amp;</span>وصال عمر</div>
+  <div class="en">Ahmed Hany &amp; Wesal Omar</div>
+  <div class="rule"></div>
+  <div class="date">الجمعة ٢٠ نوفمبر ٢٠٢٦</div>
+  <div class="en">Friday, November 20th, 2026</div>
+  <p class="sub" style="margin:10px 0 0">الحضور ٧:٣٠ مساءً · الاستقبال ٨:٠٠ مساءً<br><span class="en" style="font-size:17px">Arrival 7:30 PM · Reception 8:00 PM</span></p>
+  <div id="cd"></div>
+  <div style="margin-top:6px"><a class="btn o" id="gcal" target="_blank" rel="noopener" href="#">أضف إلى Google Calendar</a> <a class="btn o" id="ics" href="#">أضف إلى تقويم الجوال (iPhone / Outlook)</a></div>
+</section>
+
+<h2>مكان الحفل</h2>
+<div class="box">
+  <div style="font-size:22px">Majestic Hall</div>
+  <div class="sub">فندق توليب أوليمبيك إنترناشيونال سيتي · القاهرة الجديدة<br><span class="en" style="font-size:17px">TOLIP Hotel, New Cairo</span></div>
+  <!-- استبدل اللينك التالي برابط جوجل ماب الأصلي (maps.app.goo.gl/...) -->
+  <a class="map" id="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Tolip+Olympic+International+City+New+Cairo" style="margin-top:14px">
+    <svg viewBox="0 0 600 300" role="img" aria-label="خريطة الموقع">
+      <rect width="600" height="300" fill="#16233f"/>
+      <g stroke="#2a3b60" stroke-width="14" fill="none"><path d="M-10 220 L250 160 L620 230"/><path d="M130 -10 L190 310"/><path d="M420 -10 L380 310"/><path d="M-10 90 L620 60"/></g>
+      <g stroke="#243456" stroke-width="5" fill="none"><path d="M0 150 L600 130"/><path d="M290 0 L300 300"/><path d="M500 0 L530 300"/><path d="M40 0 L70 300"/></g>
+      <rect x="215" y="105" width="90" height="48" fill="#1d2d50" stroke="#c9a24b" stroke-opacity=".4"/>
+      <path d="M300 62c-20 0-36 16-36 36 0 27 36 62 36 62s36-35 36-62c0-20-16-36-36-36z" fill="#c9a24b"/>
+      <circle cx="300" cy="98" r="13" fill="#0b1426"/>
+      <text x="300" y="195" fill="#f3ecda" font-size="17" text-anchor="middle" font-family="Georgia,serif">TOLIP Hotel · New Cairo</text>
+    </svg>
+    <span class="btn">افتح الموقع على الخريطة</span>
+  </a>
+</div>
+
+<h2>تأكيد الحضور</h2>
+<div class="box">
+  <input id="rn" placeholder="الاسم" maxlength="60">
+  <div class="ch"><label><input type="radio" name="rs" value="yes" checked>سأحضر بإذن الله</label><label><input type="radio" name="rs" value="no">أعتذر عن الحضور</label></div>
+  <div id="gw"><label class="sub">عدد الحضور (شاملًا حضرتك)</label><select id="rg"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+  <button class="btn" id="rsend" type="button">تأكيد</button>
+  <p id="rst" class="sub" style="margin:12px 0 0"></p>
+</div>
+
+<h2>كلمة للعروسين</h2>
+<div class="box">
+  <input id="n" placeholder="الاسم" maxlength="60">
+  <textarea id="m" placeholder="اكتب كلمتك للعروسين..." maxlength="600"></textarea>
+  <button class="btn" id="done" type="button">Done</button>
+  <p id="st" class="sub" style="margin:12px 0 0"></p>
+</div>
+
+<!-- لوحة العروسين: افتح الصفحة بإضافة #admin في آخر الرابط -->
+<div id="adm" class="hide">
+  <h2>لوحة العروسين</h2>
+  <div class="box" id="login">
+    <input id="em" type="text" placeholder="اسم المستخدم" dir="ltr" autocapitalize="off" autocomplete="username">
+    <input id="pw" type="password" placeholder="كلمة المرور" dir="ltr" autocomplete="current-password">
+    <button class="btn" id="lg" type="button">دخول</button>
+    <p id="lgs" class="sub" style="margin:10px 0 0"></p>
+  </div>
+  <div id="own" class="hide">
+    <div class="tabs"><button type="button">تأكيدات الحضور</button></div>
+    <div class="box" style="margin-top:10px;text-align:right"><div id="rsum"></div><div id="rlist"></div></div>
+    <div class="tabs"><button type="button">رسائل المهنئين <span id="cnt"></span></button></div>
+    <div class="box" style="margin-top:10px;text-align:right">
+      <input id="q" placeholder="بحث بالاسم أو الرسالة">
+      <div id="list"></div>
+      <div style="text-align:center"><button class="btn o" id="exp" type="button">تحميل الرسائل (CSV)</button> <button class="btn o" id="out" type="button">خروج</button></div>
+    </div>
+  </div>
+</div>
+
+<h2>QR للدعوة</h2>
+<div class="box"><div id="qr" style="display:inline-block;background:#fff;padding:12px"></div><p class="sub" style="margin:10px 0 0">امسح الكود لفتح الدعوة</p></div>
+<footer>بحب وفرحة نشارككم أجمل أيامنا</footer>
+</div>
+
+<!-- ضع ملف الأغنية بجانب هذا الملف باسم music.mp3 -->
+<audio id="bg" src="music.mp3" loop preload="auto"></audio>
+<button class="mus" id="mus" type="button" aria-label="موسيقى">🎵</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script type="module">
+/* ===== إعدادات Firebase: الصق بيانات مشروعك هنا (انظر README) ===== */
+const FIREBASE = { apiKey:"", authDomain:"", projectId:"", appId:"" };
+const ADMIN_EMAIL = "ahmed.hani@wedding.example.com"; // بريد العروسين المسجّل في Firebase Authentication
+/* ================================================================ */
+
+const $ = i => document.getElementById(i);
+const esc = s => { const e=document.createElement("div"); e.textContent=s; return e.innerHTML };
+
+// العدّاد
+const target = new Date("2026-11-20T19:30:00+02:00").getTime();
+function tick(){const s=Math.floor(Math.max(0,target-Date.now())/1000);
+ $("cd").innerHTML=[[Math.floor(s/86400),"يوم"],[Math.floor(s%86400/3600),"ساعة"],[Math.floor(s%3600/60),"دقيقة"]].map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}
+tick(); setInterval(tick,30000);
+
+// التقويم
+const EV={title:"زفاف أحمد ووصال | Ahmed & Wesal Wedding",loc:"Majestic Hall, TOLIP Hotel, New Cairo",start:"20261120T173000Z",end:"20261120T213000Z"};
+$("gcal").href="https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(EV.title)+"&dates="+EV.start+"/"+EV.end+"&location="+encodeURIComponent(EV.loc)+"&details="+encodeURIComponent("الحضور 7:30 م - الاستقبال 8:00 م");
+const ICS=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Wedding Invite//AR","BEGIN:VEVENT","UID:wedding-ahmed-wesal-20261120@invite","DTSTAMP:20261014T000000Z","DTSTART:"+EV.start,"DTEND:"+EV.end,"SUMMARY:"+EV.title,"LOCATION:Majestic Hall\\, TOLIP Hotel\\, New Cairo","BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:Wedding tomorrow","END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");
+$("ics").href="data:text/calendar;charset=utf-8,"+encodeURIComponent(ICS);
+$("ics").setAttribute("download","wedding.ics");
+
+function save(name,text,type){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}
+
+// QR لرابط الصفحة نفسها
+const base = location.href.split("#")[0];
+if (window.QRCode) new QRCode($("qr"),{text:base,width:180,height:180});
+
+// الموسيقى
+const au=$("bg"); let off=false;
+const upd=()=>$("mus").textContent=au.paused?"🎵":"🔊";
+const play=()=>{ if(off) return; au.play().then(upd).catch(()=>{}) };
+$("mus").onclick=()=>{ if(au.paused){off=false;play()} else {off=true;au.pause();upd()} };
+play();
+["pointerdown","touchstart","keydown","wheel","scroll"].forEach(ev=>window.addEventListener(ev,function h(){play();window.removeEventListener(ev,h,true)},true));
+
+// Firebase (اختياري: بدونه تعمل الفورمات عبر واتساب)
+let fb=null;
+if (FIREBASE.apiKey) {
+  try {
+    const V="10.12.2", u=m=>`https://www.gstatic.com/firebasejs/${V}/firebase-${m}.js`;
+    const [A,F,Au]=await Promise.all([import(u("app")),import(u("firestore")),import(u("auth"))]);
+    const app=A.initializeApp(FIREBASE);
+    fb={F,Au,db:F.getFirestore(app),auth:Au.getAuth(app)};
+  } catch(e){ console.error(e) }
+}
+const add=(col,data)=>fb.F.addDoc(fb.F.collection(fb.db,col),data);
+
+document.querySelectorAll("input[name=rs]").forEach(r=>r.onchange=()=>{$("gw").style.display=document.querySelector("input[name=rs]:checked").value=="yes"?"block":"none"});
+
+$("rsend").onclick=async()=>{
+  const n=$("rn").value.trim(); if(!n){$("rst").textContent="من فضلك اكتب الاسم";return}
+  const yes=document.querySelector("input[name=rs]:checked").value=="yes", c=yes?+$("rg").value:0;
+  if(fb){try{await add("rsvps",{name:n,yes,n:c,ts:Date.now()});$("rst").textContent=yes?"تم تأكيد حضوركم، بانتظاركم 💛":"شكرًا لإبلاغنا";return}catch(e){console.error(e)}}
+  open("https://wa.me/?text="+encodeURIComponent("تأكيد حضور حفل أحمد ووصال\n"+n+" - "+(yes?"سأحضر، عدد الحضور: "+c:"أعتذر عن الحضور")),"_blank");
+  $("rst").textContent="تم فتح واتساب لإرسال ردك.";
+};
+$("done").onclick=async()=>{
+  const n=$("n").value.trim(), m=$("m").value.trim();
+  if(!n||!m){$("st").textContent="من فضلك اكتب الاسم والرسالة";return}
+  if(fb){try{await add("wishes",{name:n,msg:m,ts:Date.now()});$("n").value="";$("m").value="";$("st").textContent="شكرًا لك، وصلت كلمتك للعروسين 💛";return}catch(e){console.error(e)}}
+  open("https://wa.me/?text="+encodeURIComponent("كلمة للعروسين أحمد ووصال\n"+n+": "+m),"_blank");
+  $("st").textContent="تم فتح واتساب لإرسال كلمتك.";
+};
+
+// لوحة العروسين
+let wishes=[], subs=[];
+function renderW(){const q=$("q").value.trim().toLowerCase();
+ const r=wishes.filter(x=>!q||(x.name+" "+x.msg).toLowerCase().includes(q));
+ $("cnt").textContent="("+wishes.length+")";
+ $("list").innerHTML=r.length?r.map(x=>`<div class="msg"><h4>${esc(x.name)}</h4><small>${new Date(x.ts).toLocaleString("ar-EG")}</small><p>${esc(x.msg)}</p></div>`).join(""):'<p class="sub" style="text-align:center">لا توجد رسائل بعد</p>'}
+$("q").oninput=renderW;
+$("exp").onclick=()=>save("wishes.csv","\ufeffName,Message,Date\n"+wishes.map(x=>[x.name,x.msg,new Date(x.ts).toISOString()].map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")).join("\n"),"text/csv");
+
+function watch(){
+  const {F,db}=fb, q=c=>F.query(F.collection(db,c),F.orderBy("ts","desc"));
+  subs.push(F.onSnapshot(q("rsvps"),s=>{
+    const r=s.docs.map(d=>d.data()), y=r.filter(x=>x.yes), h=y.reduce((a,x)=>a+(+x.n||0),0);
+    $("rsum").innerHTML=`<div class="msg"><h4>سيحضر: ${h} شخص (${y.length} ردود)</h4><small>اعتذار: ${r.length-y.length}</small></div>`;
+    $("rlist").innerHTML=r.map(x=>`<div class="msg"><h4>${esc(x.name)}</h4><small>${x.yes?"سيحضر · "+x.n+" أشخاص":"يعتذر"}</small></div>`).join("");
+  },console.error));
+  subs.push(F.onSnapshot(q("wishes"),s=>{wishes=s.docs.map(d=>d.data());renderW()},console.error));
+}
+function adminView(){ $("adm").classList.toggle("hide",location.hash!=="#admin"||!fb) }
+addEventListener("hashchange",adminView); adminView();
+if(fb){
+  fb.Au.onAuthStateChanged(fb.auth,u=>{
+    const ok=u&&(!ADMIN_EMAIL||u.email===ADMIN_EMAIL);
+    $("login").classList.toggle("hide",!!ok); $("own").classList.toggle("hide",!ok);
+    subs.forEach(f=>f()); subs=[]; if(ok) watch();
+  });
+  $("lg").onclick=async()=>{try{await fb.Au.signInWithEmailAndPassword(fb.auth,$("em").value.trim().toLowerCase()+"@wedding.example.com",$("pw").value)}catch(e){$("lgs").textContent="بيانات الدخول غير صحيحة"}};
+  $("out").onclick=()=>fb.Au.signOut(fb.auth);
+}
+</script>
+</body>
+</html>
